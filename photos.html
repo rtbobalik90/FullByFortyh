@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#0A0A0B">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Full by 40">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Full by 40</title>
+<link rel="manifest" href="../manifest.webmanifest">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/bebas-neue@5.0.0/index.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/eb-garamond@5.0.0/index.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.0/index.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.0.0/dist/tabler-icons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body class="modular-page">
+<div id="app">
+<aside id="drawer">
+    <div class="drawer-header">
+      <div class="drawer-title">FULL BY 40</div>
+      <button class="drawer-close" aria-label="Close menu">&times;</button>
+    </div>
+    <nav>
+      <div class="drawer-item active" data-route="today">
+        <div class="drawer-item-icon"><i class="ti ti-sunrise"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">TODAY</div>
+          <div class="meta-muted" id="drawer-today-meta">Saturday morning</div>
+        </div>
+      </div>
+      <div class="drawer-item" data-route="watch" data-drawer-widget="true">
+        <div class="drawer-item-icon"><i class="ti ti-shield-check"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">THE WATCH</div>
+        </div>
+        <div class="meta" id="drawer-watch-meta">DAY 1</div>
+      </div>
+      <div class="drawer-item" data-route="becoming">
+        <div class="drawer-item-icon"><i class="ti ti-flame"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">THE BECOMING</div>
+        </div>
+      </div>
+      <div class="drawer-divider"></div>
+      <div class="drawer-item" data-route="pillars">
+        <div class="drawer-item-icon"><i class="ti ti-layout-grid"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">THE PILLARS</div>
+        </div>
+        <div class="drawer-item-right">11 AREAS</div>
+      </div>
+      <div class="drawer-item" data-route="badges">
+        <div class="drawer-item-icon"><i class="ti ti-medal-2"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">BADGES</div>
+        </div>
+        <div class="drawer-item-right" id="drawer-badges-count">0 OF 71</div>
+      </div>
+      <div class="drawer-item" data-route="rewards">
+        <div class="drawer-item-icon"><i class="ti ti-coin"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">REWARDS</div>
+        </div>
+        <div class="drawer-item-right" id="drawer-rewards-balance" style="color: #E8C176;">0 PTS</div>
+      </div>
+      <div class="drawer-divider"></div>
+      <div class="drawer-item" data-route="archives">
+        <div class="drawer-item-icon"><i class="ti ti-archive"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">ARCHIVES</div>
+        </div>
+      </div>
+      <div class="drawer-item" data-route="reviews">
+        <div class="drawer-item-icon"><i class="ti ti-notebook"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">REVIEWS</div>
+          <div class="meta-muted">Weekly · Sunday</div>
+        </div>
+      </div>
+      <div class="drawer-item" data-route="resources">
+        <div class="drawer-item-icon"><i class="ti ti-books"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">RESOURCES</div>
+        </div>
+      </div>
+      <div class="drawer-divider"></div>
+      <div class="drawer-item settings" data-route="settings">
+        <div class="drawer-item-icon"><i class="ti ti-settings"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">SETTINGS</div>
+        </div>
+      </div>
+    </nav>
+    <div class="footer-note" style="margin: 24px 0 0; font-size: 12px;">The goal is not perfection.<br>The goal is transformation.</div>
+  </aside>
+
+  <!-- === SCRIM === -->
+  <div id="scrim"></div>
+
+  <!-- === MAIN === -->
+  <main id="main">
+<header class="app-header">
+      <button class="back-btn hidden" id="back-btn" aria-label="Back">&lsaquo;</button>
+      <div class="date" id="header-date">SAT · 17 MAY</div>
+      <div class="page-title hidden" id="header-page-title"></div>
+      <button class="menu-btn" id="menu-btn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <!-- === TODAY === -->
+    <div class="modular-notice"><strong>MODULE PHASE 1</strong><br>This screen is preserved from the original app and is now isolated so iPhone Safari does not load the full app at startup. Interactions will be reconnected module-by-module next.</div><section id="view-photos" class="view active">
+      <div class="view-content">
+
+        <div class="pillar-hero">
+          <div class="icon"><i class="ti ti-camera"></i></div>
+          <div class="title">PHOTOS</div>
+          <div class="blurb">Honest mirrors, stored privately. The slow work of becoming strong, recorded so you can actually see it.</div>
+          <div class="verse">"I praise you, for I am fearfully and wonderfully made." — Psalm 139:14</div>
+        </div>
+
+        <div class="photo-view-tabs">
+          <button class="photo-view-tab active" data-photo-view="day">DAY</button>
+          <button class="photo-view-tab" data-photo-view="week">WEEK</button>
+          <button class="photo-view-tab" data-photo-view="month">MONTH</button>
+          <button class="photo-view-tab" data-photo-view="year">YEAR</button>
+          <button class="photo-view-tab" data-photo-view="timelapse">TIMELAPSE</button>
+        </div>
+
+        <!-- DAY VIEW -->
+        <div id="photo-day-section">
+          <div class="photo-day-header">
+            <div class="photo-day-nav">
+              <button id="photo-day-prev" aria-label="Previous day">&larr;</button>
+              <button id="photo-day-next" aria-label="Next day">&rarr;</button>
+            </div>
+            <div class="photo-day-date" id="photo-day-date" title="Tap to jump to today">TODAY</div>
+            <div class="photo-day-weight" id="photo-day-weight">—</div>
+          </div>
+
+          <div class="photo-grid">
+            <div class="photo-slot" data-angle="front">
+              <div class="photo-slot-content"><i class="ti ti-camera-plus"></i><div class="label">FRONT</div></div>
+            </div>
+            <div class="photo-slot" data-angle="leftSide">
+              <div class="photo-slot-content"><i class="ti ti-camera-plus"></i><div class="label">LEFT SIDE</div></div>
+            </div>
+            <div class="photo-slot" data-angle="rightSide">
+              <div class="photo-slot-content"><i class="ti ti-camera-plus"></i><div class="label">RIGHT SIDE</div></div>
+            </div>
+            <div class="photo-slot" data-angle="back">
+              <div class="photo-slot-content"><i class="ti ti-camera-plus"></i><div class="label">BACK</div></div>
+            </div>
+          </div>
+
+          <input type="file" id="photo-upload-input" accept="image/*" style="display: none;">
+
+          <div class="photo-notes-section">
+            <div class="step-label" style="margin-bottom: 6px;">NOTES</div>
+            <textarea class="text-area" id="photo-day-notes" placeholder="Optional. How you felt today, what's working, what's not, season you're in." style="min-height: 70px;"></textarea>
+          </div>
+        </div>
+
+        <!-- TIMELINE VIEW (week/month/year) -->
+        <div id="photo-timeline-section" style="display: none;">
+          <div class="photo-day-header">
+            <div style="font-family: 'Bebas Neue', Impact, sans-serif; font-size: 14px; letter-spacing: 0.2em; color: var(--text-muted);" id="photo-timeline-label">LAST 7 DAYS</div>
+            <div style="font-family: 'Bebas Neue', Impact, sans-serif; font-size: 12px; letter-spacing: 0.18em; color: var(--accent);" id="photo-timeline-count">0 SESSIONS</div>
+          </div>
+          <div id="photo-timeline-list"></div>
+        </div>
+
+        <!-- TIMELAPSE VIEW -->
+        <div id="photo-timelapse-section" style="display: none;">
+          <div class="photo-view-tabs" style="margin-bottom: 14px;">
+            <button class="photo-view-tab active" data-tl-angle="front">FRONT</button>
+            <button class="photo-view-tab" data-tl-angle="leftSide">LEFT</button>
+            <button class="photo-view-tab" data-tl-angle="rightSide">RIGHT</button>
+            <button class="photo-view-tab" data-tl-angle="back">BACK</button>
+          </div>
+          <div id="photo-timelapse-body"></div>
+        </div>
+
+        <!-- AI ANALYSIS -->
+        <div class="photo-ai-section">
+          <button class="btn btn-primary" id="photo-analyze-btn">
+            <i class="ti ti-sparkles"></i> <span id="photo-analyze-label">ANALYZE WITH AI</span>
+          </button>
+          <div class="photo-ai-panel" id="photo-ai-panel" style="margin-top: 12px; display: none;">
+            <div class="photo-ai-header">
+              <div class="photo-ai-title" id="photo-ai-title">AI ANALYSIS</div>
+              <div class="photo-ai-timestamp" id="photo-ai-timestamp"></div>
+            </div>
+            <div class="photo-ai-body" id="photo-ai-body"></div>
+          </div>
+        </div>
+
+        <div class="photo-privacy-footer">
+          These photos are stored only on this device. They never leave it — except when you tap "Analyze with AI," at which point they're sent to Anthropic's servers for that single analysis and then not retained. Requires your Anthropic API key in Settings.
+        </div>
+
+        <div class="footer-note">For long-term archive, export your data weekly. Photo storage is local and limited.</div>
+
+      </div>
+    </section>
+
+    <!-- === PHYSICAL · WORKOUTS === -->
+    
+</main>
+</div>
+<script src="../assets/core.js"></script>
+<script>document.addEventListener("DOMContentLoaded",()=>{const b=document.getElementById("back-btn"),d=document.getElementById("header-date"),t=document.getElementById("header-page-title"); if(b)b.classList.remove("hidden"); if(d)d.classList.add("hidden"); if(t){t.classList.remove("hidden"); t.textContent="PHOTOS";}})</script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#0A0A0B">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Full by 40">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Full by 40</title>
+<link rel="manifest" href="../manifest.webmanifest">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/bebas-neue@5.0.0/index.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/eb-garamond@5.0.0/index.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.0/index.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.0.0/dist/tabler-icons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body class="modular-page">
+<div id="app">
+<aside id="drawer">
+    <div class="drawer-header">
+      <div class="drawer-title">FULL BY 40</div>
+      <button class="drawer-close" aria-label="Close menu">&times;</button>
+    </div>
+    <nav>
+      <div class="drawer-item active" data-route="today">
+        <div class="drawer-item-icon"><i class="ti ti-sunrise"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">TODAY</div>
+          <div class="meta-muted" id="drawer-today-meta">Saturday morning</div>
+        </div>
+      </div>
+      <div class="drawer-item" data-route="watch" data-drawer-widget="true">
+        <div class="drawer-item-icon"><i class="ti ti-shield-check"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">THE WATCH</div>
+        </div>
+        <div class="meta" id="drawer-watch-meta">DAY 1</div>
+      </div>
+      <div class="drawer-item" data-route="becoming">
+        <div class="drawer-item-icon"><i class="ti ti-flame"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">THE BECOMING</div>
+        </div>
+      </div>
+      <div class="drawer-divider"></div>
+      <div class="drawer-item" data-route="pillars">
+        <div class="drawer-item-icon"><i class="ti ti-layout-grid"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">THE PILLARS</div>
+        </div>
+        <div class="drawer-item-right">11 AREAS</div>
+      </div>
+      <div class="drawer-item" data-route="badges">
+        <div class="drawer-item-icon"><i class="ti ti-medal-2"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">BADGES</div>
+        </div>
+        <div class="drawer-item-right" id="drawer-badges-count">0 OF 71</div>
+      </div>
+      <div class="drawer-item" data-route="rewards">
+        <div class="drawer-item-icon"><i class="ti ti-coin"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">REWARDS</div>
+        </div>
+        <div class="drawer-item-right" id="drawer-rewards-balance" style="color: #E8C176;">0 PTS</div>
+      </div>
+      <div class="drawer-divider"></div>
+      <div class="drawer-item" data-route="archives">
+        <div class="drawer-item-icon"><i class="ti ti-archive"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">ARCHIVES</div>
+        </div>
+      </div>
+      <div class="drawer-item" data-route="reviews">
+        <div class="drawer-item-icon"><i class="ti ti-notebook"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">REVIEWS</div>
+          <div class="meta-muted">Weekly · Sunday</div>
+        </div>
+      </div>
+      <div class="drawer-item" data-route="resources">
+        <div class="drawer-item-icon"><i class="ti ti-books"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">RESOURCES</div>
+        </div>
+      </div>
+      <div class="drawer-divider"></div>
+      <div class="drawer-item settings" data-route="settings">
+        <div class="drawer-item-icon"><i class="ti ti-settings"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">SETTINGS</div>
+        </div>
+      </div>
+    </nav>
+    <div class="footer-note" style="margin: 24px 0 0; font-size: 12px;">The goal is not perfection.<br>The goal is transformation.</div>
+  </aside>
+
+  <!-- === SCRIM === -->
+  <div id="scrim"></div>
+
+  <!-- === MAIN === -->
+  <main id="main">
+<header class="app-header">
+      <button class="back-btn hidden" id="back-btn" aria-label="Back">&lsaquo;</button>
+      <div class="date" id="header-date">SAT · 17 MAY</div>
+      <div class="page-title hidden" id="header-page-title"></div>
+      <button class="menu-btn" id="menu-btn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <!-- === TODAY === -->
+    <div class="modular-notice"><strong>MODULE PHASE 1</strong><br>This screen is preserved from the original app and is now isolated so iPhone Safari does not load the full app at startup. Interactions will be reconnected module-by-module next.</div><section id="view-settings" class="view active">
+      <div class="view-content">
+
+        <div class="section-head" style="margin-top: 0;">
+          <div class="title">SETTINGS</div>
+        </div>
+
+        <div class="glass mb-4">
+          <div class="label" style="margin-bottom: 10px;">ESV API KEY</div>
+          <div class="muted" style="font-size: 12px; line-height: 1.45; margin-bottom: 12px;">Required to pull live ESV text. Register free at api.esv.org. Without it, the system uses cached default verses.</div>
+          <input type="password" class="text-input" id="esv-key-input" placeholder="Paste your ESV API key">
+          <button class="btn btn-ghost btn-sm mt-3" id="save-esv-key">SAVE KEY</button>
+        </div>
+
+        <div class="glass mb-4">
+          <div class="label" style="margin-bottom: 10px;">ANTHROPIC API KEY (AI CHAT)</div>
+          <div class="muted" style="font-size: 12px; line-height: 1.45; margin-bottom: 12px;">Optional. Powers the Talk Me Down AI chat. Off by default. When you're ready, paste your key.</div>
+          <input type="password" class="text-input" id="anthropic-key-input" placeholder="Paste your Anthropic API key">
+          <button class="btn btn-ghost btn-sm mt-3" id="save-anthropic-key">SAVE KEY</button>
+        </div>
+
+        <div class="glass mb-4">
+          <div class="label" style="margin-bottom: 10px;">CLOUD BACKUP</div>
+          <div class="muted" style="font-size: 12px; line-height: 1.45; margin-bottom: 12px;">
+            Auto-syncs all your data to a private GitHub Gist. Survives cookie clears, device resets, and reinstalls.
+            <br><br>
+            <b>One-time setup:</b><br>
+            1. Go to <span style="color: var(--accent-bright);">github.com/settings/tokens</span><br>
+            2. Generate new token (classic) → check only the <span style="color: var(--accent-bright);">gist</span> box → generate<br>
+            3. Copy the token and paste below.<br>
+            <b style="color: #C7706B;">Save the token in your password manager too</b> — you'll need it again if you ever clear data.
+          </div>
+
+          <input type="password" class="text-input" id="cloud-pat-input" placeholder="Paste GitHub Personal Access Token" style="margin-bottom: 10px;">
+
+          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px;">
+            <button class="btn btn-primary btn-sm" id="cloud-test-btn">TEST &amp; SAVE</button>
+            <button class="btn btn-ghost btn-sm" id="cloud-sync-now-btn" disabled>SYNC NOW</button>
+            <button class="btn btn-ghost btn-sm" id="cloud-restore-btn" style="color: var(--accent-bright);">RESTORE FROM BACKUP</button>
+          </div>
+
+          <div id="cloud-status" style="font-family: 'Bebas Neue', Impact, sans-serif; font-size: 10px; letter-spacing: 0.18em; color: var(--text-muted); margin-bottom: 12px;">NOT CONFIGURED</div>
+
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+            <input type="checkbox" id="cloud-autosync-toggle" style="width: 20px; height: 20px;">
+            <label for="cloud-autosync-toggle" style="font-family: 'Bebas Neue', Impact, sans-serif; letter-spacing: 0.16em; font-size: 12px;">AUTO-SYNC EVERY 5 MIN</label>
+          </div>
+
+          <div class="muted" style="font-size: 11px; line-height: 1.4; margin-top: 12px; padding: 10px; background: rgba(199, 112, 107, 0.08); border-radius: 8px; border-left: 2px solid #C7706B;">
+            <b>Privacy note:</b> Data is stored as a private GitHub Gist. Only people with your token can access it. GitHub stores it on their servers and theoretically has access. Don't enable cloud backup if that bothers you.
+          </div>
+        </div>
+
+        <div class="glass mb-4">
+          <div class="label" style="margin-bottom: 10px;">PATTERN ALERTS</div>
+          <div class="muted" style="font-size: 12px; line-height: 1.45; margin-bottom: 12px;">Real-time risk evaluation. Surfaces warnings on home/watch when dangerous conditions stack (late night + poor sleep + low mood etc.).</div>
+
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+            <input type="checkbox" id="alerts-enabled-toggle" style="width: 20px; height: 20px;">
+            <label for="alerts-enabled-toggle" style="font-family: 'Bebas Neue', Impact, sans-serif; letter-spacing: 0.16em; font-size: 12px;">ENABLED</label>
+          </div>
+
+          <div class="label" style="margin-bottom: 8px;">SENSITIVITY</div>
+          <select class="text-input" id="alerts-sensitivity-select">
+            <option value="more">MORE SENSITIVE — fires earlier (watchful ≥3, alert ≥5)</option>
+            <option value="standard">STANDARD — balanced (watchful ≥4, alert ≥7)</option>
+            <option value="less">LESS SENSITIVE — fires only when serious (watchful ≥5, alert ≥8)</option>
+          </select>
+
+          <button class="btn btn-ghost btn-sm mt-3" id="save-alerts-settings">SAVE</button>
+        </div>
+
+        <div class="glass mb-4">
+          <div class="label" style="margin-bottom: 10px;">DAILY BRIEF · AUTO-GENERATE</div>
+          <div class="muted" style="font-size: 12px; line-height: 1.45; margin-bottom: 12px;">When ON, your daily brief generates automatically after morning check-in.</div>
+          <select class="text-input" id="brief-auto-select">
+            <option value="null">ASK ME EACH TIME</option>
+            <option value="true">YES, ALWAYS</option>
+            <option value="false">NO, NEVER</option>
+          </select>
+          <button class="btn btn-ghost btn-sm mt-3" id="save-brief-auto">SAVE</button>
+        </div>
+
+        <div class="glass mb-4">
+          <div class="label" style="margin-bottom: 10px;">WEEKLY INSIGHTS · AUTO-GENERATE</div>
+          <div class="muted" style="font-size: 12px; line-height: 1.45; margin-bottom: 12px;">When ON, insights auto-generate every Sunday evening after your check-in.</div>
+          <select class="text-input" id="insights-auto-select">
+            <option value="null">ASK ME EACH TIME</option>
+            <option value="true">YES, ALWAYS</option>
+            <option value="false">NO, NEVER</option>
+          </select>
+          <button class="btn btn-ghost btn-sm mt-3" id="save-insights-auto">SAVE</button>
+        </div>
+
+        <div class="glass mb-4">
+          <div class="label" style="margin-bottom: 10px;">APP LOCK</div>
+          <div class="muted" style="font-size: 12px; line-height: 1.45; margin-bottom: 12px;" id="lock-settings-status">Lock the app with a 6-digit passcode. No one sees your data without it. Face ID/Touch ID can unlock too. There is no recovery if you forget your code.</div>
+          <div id="lock-settings-controls"></div>
+        </div>
+
+        <div class="glass mb-4">
+          <div class="label" style="margin-bottom: 10px;">THE WATCH · GOAL</div>
+          <div class="muted" style="font-size: 12px; margin-bottom: 12px;">Current target streak. Recalibrate anytime — this isn't punishment, it's setting the next stretch.</div>
+          <input type="number" class="text-input number-input" id="goal-input" value="30" min="1" max="365">
+          <button class="btn btn-ghost btn-sm mt-3" id="save-goal">SAVE GOAL</button>
+        </div>
+
+        <div class="glass mb-4">
+          <div class="label" style="margin-bottom: 10px;">DAILY READING · CURRENT PLAN</div>
+          <div class="muted" style="font-size: 12px; line-height: 1.45; margin-bottom: 12px;">The reading plan you're on right now. Update whenever you switch plans. Leaving these blank just removes the link.</div>
+          <input class="text-input" id="plan-name-input" placeholder="Plan name (e.g. Friendship with Jesus)" maxlength="80" style="margin-bottom: 8px;">
+          <input class="text-input" id="plan-url-input" placeholder="https://www.bible.com/reading-plans/…" maxlength="500">
+          <button class="btn btn-ghost btn-sm mt-3" id="save-plan">SAVE PLAN</button>
+        </div>
+
+        <div class="glass mb-4">
+          <div class="label" style="margin-bottom: 10px;">CUSTOMIZE</div>
+          <div class="muted" style="font-size: 12px; line-height: 1.45; margin-bottom: 14px;">Pick what's at the top of HOME, what cards show on HOME, and which sub-sections show inside each pillar. Changes save instantly.</div>
+          <div id="customize-content"></div>
+        </div>
+
+        <div class="glass mb-4">
+          <div class="label" style="margin-bottom: 10px;">STORAGE</div>
+          <div class="muted" style="font-size: 12px; line-height: 1.45; margin-bottom: 12px;">Your data lives on this device. Photos and recipe images take the most room. Recipe images now save to a separate, larger pool (IndexedDB) so you can keep hundreds.</div>
+          <div id="storage-meter-content"></div>
+          <button class="btn btn-ghost btn-sm" id="storage-refresh-btn" style="margin-top: 10px; width: 100%;">REFRESH</button>
+        </div>
+
+        <div class="glass mb-4">
+          <div class="label" style="margin-bottom: 10px;">DATA</div>
+          <div class="muted" style="font-size: 12px; line-height: 1.45; margin-bottom: 12px;">Your data lives on this device. Export weekly so a phone replacement doesn't lose four years of formation work. Import restores from a previous export — useful when moving devices.</div>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button class="btn btn-ghost btn-sm" id="export-btn" style="flex: 1; min-width: 130px;">EXPORT JSON</button>
+            <button class="btn btn-ghost btn-sm" id="import-btn" style="flex: 1; min-width: 130px;">IMPORT JSON</button>
+          </div>
+          <input type="file" id="import-input" accept="application/json,.json" style="display: none;">
+          <button class="btn btn-danger btn-sm mt-3" id="reset-btn" style="width: 100%;">RESET ALL DATA</button>
+        </div>
+
+        <div class="footer-note">v0.1 · Phase 1 prototype<br>"The goal is not perfection. The goal is transformation."</div>
+
+      </div>
+    </section>
+
+  
+</main>
+</div>
+<script src="../assets/core.js"></script>
+<script>document.addEventListener("DOMContentLoaded",()=>{const b=document.getElementById("back-btn"),d=document.getElementById("header-date"),t=document.getElementById("header-page-title"); if(b)b.classList.remove("hidden"); if(d)d.classList.add("hidden"); if(t){t.classList.remove("hidden"); t.textContent="SETTINGS";}})</script>
+</body>
+</html>

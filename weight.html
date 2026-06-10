@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#0A0A0B">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Full by 40">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Full by 40</title>
+<link rel="manifest" href="../manifest.webmanifest">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/bebas-neue@5.0.0/index.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/eb-garamond@5.0.0/index.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.0/index.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.0.0/dist/tabler-icons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body class="modular-page">
+<div id="app">
+<aside id="drawer">
+    <div class="drawer-header">
+      <div class="drawer-title">FULL BY 40</div>
+      <button class="drawer-close" aria-label="Close menu">&times;</button>
+    </div>
+    <nav>
+      <div class="drawer-item active" data-route="today">
+        <div class="drawer-item-icon"><i class="ti ti-sunrise"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">TODAY</div>
+          <div class="meta-muted" id="drawer-today-meta">Saturday morning</div>
+        </div>
+      </div>
+      <div class="drawer-item" data-route="watch" data-drawer-widget="true">
+        <div class="drawer-item-icon"><i class="ti ti-shield-check"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">THE WATCH</div>
+        </div>
+        <div class="meta" id="drawer-watch-meta">DAY 1</div>
+      </div>
+      <div class="drawer-item" data-route="becoming">
+        <div class="drawer-item-icon"><i class="ti ti-flame"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">THE BECOMING</div>
+        </div>
+      </div>
+      <div class="drawer-divider"></div>
+      <div class="drawer-item" data-route="pillars">
+        <div class="drawer-item-icon"><i class="ti ti-layout-grid"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">THE PILLARS</div>
+        </div>
+        <div class="drawer-item-right">11 AREAS</div>
+      </div>
+      <div class="drawer-item" data-route="badges">
+        <div class="drawer-item-icon"><i class="ti ti-medal-2"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">BADGES</div>
+        </div>
+        <div class="drawer-item-right" id="drawer-badges-count">0 OF 71</div>
+      </div>
+      <div class="drawer-item" data-route="rewards">
+        <div class="drawer-item-icon"><i class="ti ti-coin"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">REWARDS</div>
+        </div>
+        <div class="drawer-item-right" id="drawer-rewards-balance" style="color: #E8C176;">0 PTS</div>
+      </div>
+      <div class="drawer-divider"></div>
+      <div class="drawer-item" data-route="archives">
+        <div class="drawer-item-icon"><i class="ti ti-archive"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">ARCHIVES</div>
+        </div>
+      </div>
+      <div class="drawer-item" data-route="reviews">
+        <div class="drawer-item-icon"><i class="ti ti-notebook"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">REVIEWS</div>
+          <div class="meta-muted">Weekly · Sunday</div>
+        </div>
+      </div>
+      <div class="drawer-item" data-route="resources">
+        <div class="drawer-item-icon"><i class="ti ti-books"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">RESOURCES</div>
+        </div>
+      </div>
+      <div class="drawer-divider"></div>
+      <div class="drawer-item settings" data-route="settings">
+        <div class="drawer-item-icon"><i class="ti ti-settings"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">SETTINGS</div>
+        </div>
+      </div>
+    </nav>
+    <div class="footer-note" style="margin: 24px 0 0; font-size: 12px;">The goal is not perfection.<br>The goal is transformation.</div>
+  </aside>
+
+  <!-- === SCRIM === -->
+  <div id="scrim"></div>
+
+  <!-- === MAIN === -->
+  <main id="main">
+<header class="app-header">
+      <button class="back-btn hidden" id="back-btn" aria-label="Back">&lsaquo;</button>
+      <div class="date" id="header-date">SAT · 17 MAY</div>
+      <div class="page-title hidden" id="header-page-title"></div>
+      <button class="menu-btn" id="menu-btn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <!-- === TODAY === -->
+    <div class="modular-notice"><strong>MODULE PHASE 1</strong><br>This screen is preserved from the original app and is now isolated so iPhone Safari does not load the full app at startup. Interactions will be reconnected module-by-module next.</div><section id="view-weight" class="view active">
+      <div class="view-content">
+
+        <div class="pillar-hero">
+          <div class="icon"><i class="ti ti-weight"></i></div>
+          <div class="title">WEIGHT</div>
+          <div class="blurb">A number, not an identity. Tracked honestly so the trend can teach you.</div>
+          <div class="verse">"The hand of the diligent makes rich." — Proverbs 10:4</div>
+        </div>
+
+        <div class="weight-current-card">
+          <div class="weight-current-label">CURRENT</div>
+          <div class="weight-current-row">
+            <div class="weight-current-value" id="weight-current-value">—</div>
+            <div class="weight-current-unit" id="weight-current-unit">LBS</div>
+          </div>
+          <div class="weight-current-date" id="weight-current-date">No weight logged yet</div>
+          <div class="weight-goal-line" id="weight-goal-line">No goal set</div>
+          <div class="weight-progress-bar" id="weight-progress-bar" style="display: none;">
+            <div class="weight-progress-fill" id="weight-progress-fill" style="width: 0%;"></div>
+          </div>
+        </div>
+
+        <div class="weight-stats">
+          <div class="weight-stat">
+            <div class="weight-stat-num muted" id="weight-7d-change">—</div>
+            <div class="weight-stat-label">7 DAYS</div>
+          </div>
+          <div class="weight-stat">
+            <div class="weight-stat-num muted" id="weight-30d-change">—</div>
+            <div class="weight-stat-label">30 DAYS</div>
+          </div>
+          <div class="weight-stat">
+            <div class="weight-stat-num muted" id="weight-to-goal">—</div>
+            <div class="weight-stat-label">TO GOAL</div>
+          </div>
+        </div>
+
+        <div class="weight-chart-container">
+          <svg class="weight-chart-svg" id="weight-chart-svg" viewBox="0 0 400 200" preserveAspectRatio="none"></svg>
+          <div class="weight-chart-tabs">
+            <button class="weight-chart-tab" data-range="30d">30D</button>
+            <button class="weight-chart-tab active" data-range="90d">90D</button>
+            <button class="weight-chart-tab" data-range="1y">1Y</button>
+            <button class="weight-chart-tab" data-range="all">ALL</button>
+          </div>
+        </div>
+
+        <button class="btn btn-primary" id="log-weight-btn">+ LOG WEIGHT</button>
+
+        <div class="section-head" style="margin-top: 22px;">
+          <div class="title">HISTORY</div>
+        </div>
+        <div id="weight-history-list"></div>
+
+        <div class="section-head" style="margin-top: 26px;">
+          <div class="title">GOAL</div>
+        </div>
+        <div class="glass">
+          <div class="muted" style="font-size: 12px; line-height: 1.5; margin-bottom: 14px;">Set what you're working toward. Update when seasons change — cutting, building, maintaining.</div>
+          <div class="food-goals-grid">
+            <div>
+              <div class="step-label">GOAL (LBS)</div>
+              <input type="number" class="text-input number-input" id="weight-goal-input" placeholder="170" step="0.1">
+            </div>
+            <div>
+              <div class="step-label">START (LBS)</div>
+              <input type="number" class="text-input number-input" id="weight-start-input" placeholder="auto" step="0.1">
+            </div>
+          </div>
+          <div class="muted" style="font-size: 11px; line-height: 1.4; margin-bottom: 14px;">Leave START blank to use your earliest logged weight automatically.</div>
+          <button class="btn btn-primary" id="save-weight-goal">SAVE GOAL</button>
+        </div>
+
+        <div class="footer-note">"Bodily training is of some value, but godliness is of value in every way."<br>— 1 Timothy 4:8</div>
+
+      </div>
+    </section>
+
+    <!-- === PHYSICAL · STEPS === -->
+    
+</main>
+</div>
+<script src="../assets/core.js"></script>
+<script>document.addEventListener("DOMContentLoaded",()=>{const b=document.getElementById("back-btn"),d=document.getElementById("header-date"),t=document.getElementById("header-page-title"); if(b)b.classList.remove("hidden"); if(d)d.classList.add("hidden"); if(t){t.classList.remove("hidden"); t.textContent="WEIGHT";}})</script>
+</body>
+</html>

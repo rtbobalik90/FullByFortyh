@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#0A0A0B">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Full by 40">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Full by 40</title>
+<link rel="manifest" href="../manifest.webmanifest">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/bebas-neue@5.0.0/index.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/eb-garamond@5.0.0/index.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.0/index.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.0.0/dist/tabler-icons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body class="modular-page">
+<div id="app">
+<aside id="drawer">
+    <div class="drawer-header">
+      <div class="drawer-title">FULL BY 40</div>
+      <button class="drawer-close" aria-label="Close menu">&times;</button>
+    </div>
+    <nav>
+      <div class="drawer-item active" data-route="today">
+        <div class="drawer-item-icon"><i class="ti ti-sunrise"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">TODAY</div>
+          <div class="meta-muted" id="drawer-today-meta">Saturday morning</div>
+        </div>
+      </div>
+      <div class="drawer-item" data-route="watch" data-drawer-widget="true">
+        <div class="drawer-item-icon"><i class="ti ti-shield-check"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">THE WATCH</div>
+        </div>
+        <div class="meta" id="drawer-watch-meta">DAY 1</div>
+      </div>
+      <div class="drawer-item" data-route="becoming">
+        <div class="drawer-item-icon"><i class="ti ti-flame"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">THE BECOMING</div>
+        </div>
+      </div>
+      <div class="drawer-divider"></div>
+      <div class="drawer-item" data-route="pillars">
+        <div class="drawer-item-icon"><i class="ti ti-layout-grid"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">THE PILLARS</div>
+        </div>
+        <div class="drawer-item-right">11 AREAS</div>
+      </div>
+      <div class="drawer-item" data-route="badges">
+        <div class="drawer-item-icon"><i class="ti ti-medal-2"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">BADGES</div>
+        </div>
+        <div class="drawer-item-right" id="drawer-badges-count">0 OF 71</div>
+      </div>
+      <div class="drawer-item" data-route="rewards">
+        <div class="drawer-item-icon"><i class="ti ti-coin"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">REWARDS</div>
+        </div>
+        <div class="drawer-item-right" id="drawer-rewards-balance" style="color: #E8C176;">0 PTS</div>
+      </div>
+      <div class="drawer-divider"></div>
+      <div class="drawer-item" data-route="archives">
+        <div class="drawer-item-icon"><i class="ti ti-archive"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">ARCHIVES</div>
+        </div>
+      </div>
+      <div class="drawer-item" data-route="reviews">
+        <div class="drawer-item-icon"><i class="ti ti-notebook"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">REVIEWS</div>
+          <div class="meta-muted">Weekly · Sunday</div>
+        </div>
+      </div>
+      <div class="drawer-item" data-route="resources">
+        <div class="drawer-item-icon"><i class="ti ti-books"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">RESOURCES</div>
+        </div>
+      </div>
+      <div class="drawer-divider"></div>
+      <div class="drawer-item settings" data-route="settings">
+        <div class="drawer-item-icon"><i class="ti ti-settings"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">SETTINGS</div>
+        </div>
+      </div>
+    </nav>
+    <div class="footer-note" style="margin: 24px 0 0; font-size: 12px;">The goal is not perfection.<br>The goal is transformation.</div>
+  </aside>
+
+  <!-- === SCRIM === -->
+  <div id="scrim"></div>
+
+  <!-- === MAIN === -->
+  <main id="main">
+<header class="app-header">
+      <button class="back-btn hidden" id="back-btn" aria-label="Back">&lsaquo;</button>
+      <div class="date" id="header-date">SAT · 17 MAY</div>
+      <div class="page-title hidden" id="header-page-title"></div>
+      <button class="menu-btn" id="menu-btn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <!-- === TODAY === -->
+    <div class="modular-notice"><strong>MODULE PHASE 1</strong><br>This screen is preserved from the original app and is now isolated so iPhone Safari does not load the full app at startup. Interactions will be reconnected module-by-module next.</div><section id="view-becoming" class="view active">
+      <div class="view-content">
+
+        <div class="becoming-anchor">
+          <div class="primary-id">SON</div>
+          <div class="anchor-ref">Romans 8:15–17</div>
+          <div class="condensed">I am a redeemed son of God being formed into a faithful father, steady leader, and restorer.</div>
+        </div>
+
+        <div class="section-head">
+          <div class="title">SUB-IDENTITIES</div>
+          <div class="muted" style="font-size: 11px;">Son is primary this season</div>
+        </div>
+        <div class="sub-identities">
+          <div class="sub-id active" data-id="son"><div class="lbl">SON</div></div>
+          <div class="sub-id" data-id="redeemed"><div class="lbl">REDEEMED</div></div>
+          <div class="sub-id" data-id="restorer"><div class="lbl">RESTORER</div></div>
+          <div class="sub-id" data-id="builder"><div class="lbl">BUILDER</div></div>
+          <div class="sub-id" data-id="protector"><div class="lbl">PROTECTOR</div></div>
+          <div class="sub-id" data-id="shepherd"><div class="lbl">SHEPHERD</div></div>
+          <div class="sub-id" data-id="image-bearer"><div class="lbl">IMAGE-BEARER</div></div>
+          <div class="sub-id" data-id="in-process"><div class="lbl">IN PROCESS</div></div>
+        </div>
+
+        <div class="section-head">
+          <div class="title">NORTH STARS</div>
+          <div class="muted" style="font-size: 11px;">What the girls will say</div>
+        </div>
+        <div class="glass north-stars" style="padding: 0;">
+          <div class="star" data-star="cycles">"Dad broke cycles instead of repeating them."</div>
+          <div class="star" data-star="fight">"Dad fought hard to become healthy and whole."</div>
+          <div class="star" data-star="jesus">"Dad loved Jesus more as he got older, not less."</div>
+        </div>
+
+        <div class="section-head">
+          <div class="title">IDENTITY STATEMENTS</div>
+          <div class="muted" style="font-size: 11px;">Star what's true</div>
+        </div>
+        <div class="identity-statements" id="identity-statements"></div>
+
+        <div class="section-head">
+          <div class="title">LIES &amp; TRUTH</div>
+        </div>
+        <div class="glass lies-list" style="padding: 0 18px;">
+          <div class="item" data-lie="messed-up">
+            <div class="lie">"I've messed up too much. God is tired of me."</div>
+            <div class="truth">God disciplines sons; He doesn't discard them. Your repeated returning may be evidence of grace, not rejection.</div>
+          </div>
+          <div class="item" data-lie="addiction-identity">
+            <div class="lie">"My addiction tells me who I really am."</div>
+            <div class="truth">Struggle reveals wounds; it does not define identity. A man fighting sin is different than a man surrendering to it.</div>
+          </div>
+          <div class="item" data-lie="ruined-purpose">
+            <div class="lie">"I ruined my family and therefore ruined my purpose."</div>
+            <div class="truth">Failure changes stories; it does not cancel calling.</div>
+          </div>
+          <div class="item" data-lie="unworthy">
+            <div class="lie">"I'm unworthy of love, intimacy, or peace."</div>
+            <div class="truth">Worth was assigned by Christ before performance.</div>
+          </div>
+          <div class="item" data-lie="different-father">
+            <div class="lie">"My daughters would be better with a different father."</div>
+            <div class="truth">Your daughters do not need a perfect man. They need their dad — present, repentant, playful, growing, loving Jesus.</div>
+          </div>
+          <div class="item" data-lie="alone">
+            <div class="lie">"I have to carry everything alone."</div>
+            <div class="truth">Strength and isolation are not the same thing.</div>
+          </div>
+          <div class="item" data-lie="behind">
+            <div class="lie">"I'm behind everyone else."</div>
+            <div class="truth">Growth at 36 is still growth. Many men never start.</div>
+          </div>
+        </div>
+
+        <div class="section-head">
+          <div class="title">40 BY 40</div>
+          <div class="muted" style="font-size: 11px;" id="fbf-quarterly">Review quarterly</div>
+        </div>
+
+        <div class="fbf-stats">
+          <div><span class="num" id="fbf-total">0</span> &nbsp;OF 40 LISTED</div>
+          <div><span class="num" id="fbf-achieved">0</span> &nbsp;ACHIEVED</div>
+        </div>
+
+        <div class="fbf-add">
+          <input class="text-input" id="fbf-input" placeholder="A mark of the man you want to be by 40…" maxlength="140">
+          <button class="fbf-add-btn" id="fbf-add-btn">ADD</button>
+        </div>
+
+        <div class="fbf-list" id="fbf-list"></div>
+
+        <div class="fbf-legend">Tap the circle to cycle: not started · in progress · achieved.<br>Add them as God shows you. Not a bucket list — a portrait of the man being formed.</div>
+
+        <div class="footer-note">"He who began a good work in you will bring it to completion at the day of Jesus Christ."<br>— Philippians 1:6</div>
+
+      </div>
+    </section>
+
+    <!-- === THE PILLARS === -->
+    
+</main>
+</div>
+<script src="../assets/core.js"></script>
+<script>document.addEventListener("DOMContentLoaded",()=>{const b=document.getElementById("back-btn"),d=document.getElementById("header-date"),t=document.getElementById("header-page-title"); if(b)b.classList.remove("hidden"); if(d)d.classList.add("hidden"); if(t){t.classList.remove("hidden"); t.textContent="BECOMING";}})</script>
+</body>
+</html>

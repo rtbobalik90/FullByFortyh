@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#0A0A0B">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Full by 40">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Full by 40</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/bebas-neue@5.0.0/index.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/eb-garamond@5.0.0/index.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.0/index.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.0.0/dist/tabler-icons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="modular-page">
+<div id="app">
+<aside id="drawer">
+    <div class="drawer-header">
+      <div class="drawer-title">FULL BY 40</div>
+      <button class="drawer-close" aria-label="Close menu">&times;</button>
+    </div>
+    <nav>
+      <div class="drawer-item active" data-route="today">
+        <div class="drawer-item-icon"><i class="ti ti-sunrise"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">TODAY</div>
+          <div class="meta-muted" id="drawer-today-meta">Saturday morning</div>
+        </div>
+      </div>
+      <div class="drawer-item" data-route="watch" data-drawer-widget="true">
+        <div class="drawer-item-icon"><i class="ti ti-shield-check"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">THE WATCH</div>
+        </div>
+        <div class="meta" id="drawer-watch-meta">DAY 1</div>
+      </div>
+      <div class="drawer-item" data-route="becoming">
+        <div class="drawer-item-icon"><i class="ti ti-flame"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">THE BECOMING</div>
+        </div>
+      </div>
+      <div class="drawer-divider"></div>
+      <div class="drawer-item" data-route="pillars">
+        <div class="drawer-item-icon"><i class="ti ti-layout-grid"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">THE PILLARS</div>
+        </div>
+        <div class="drawer-item-right">11 AREAS</div>
+      </div>
+      <div class="drawer-item" data-route="badges">
+        <div class="drawer-item-icon"><i class="ti ti-medal-2"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">BADGES</div>
+        </div>
+        <div class="drawer-item-right" id="drawer-badges-count">0 OF 71</div>
+      </div>
+      <div class="drawer-item" data-route="rewards">
+        <div class="drawer-item-icon"><i class="ti ti-coin"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">REWARDS</div>
+        </div>
+        <div class="drawer-item-right" id="drawer-rewards-balance" style="color: #E8C176;">0 PTS</div>
+      </div>
+      <div class="drawer-divider"></div>
+      <div class="drawer-item" data-route="archives">
+        <div class="drawer-item-icon"><i class="ti ti-archive"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">ARCHIVES</div>
+        </div>
+      </div>
+      <div class="drawer-item" data-route="reviews">
+        <div class="drawer-item-icon"><i class="ti ti-notebook"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">REVIEWS</div>
+          <div class="meta-muted">Weekly · Sunday</div>
+        </div>
+      </div>
+      <div class="drawer-item" data-route="resources">
+        <div class="drawer-item-icon"><i class="ti ti-books"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">RESOURCES</div>
+        </div>
+      </div>
+      <div class="drawer-divider"></div>
+      <div class="drawer-item settings" data-route="settings">
+        <div class="drawer-item-icon"><i class="ti ti-settings"></i></div>
+        <div class="drawer-item-body">
+          <div class="name">SETTINGS</div>
+        </div>
+      </div>
+    </nav>
+    <div class="footer-note" style="margin: 24px 0 0; font-size: 12px;">The goal is not perfection.<br>The goal is transformation.</div>
+  </aside>
+
+  <!-- === SCRIM === -->
+  <div id="scrim"></div>
+
+  <!-- === MAIN === -->
+  <main id="main">
+<header class="app-header">
+      <button class="back-btn hidden" id="back-btn" aria-label="Back">&lsaquo;</button>
+      <div class="date" id="header-date">SAT · 17 MAY</div>
+      <div class="page-title hidden" id="header-page-title"></div>
+      <button class="menu-btn" id="menu-btn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <!-- === TODAY === -->
+    <section id="view-today" class="view active">
+      <div class="view-content">
+
+        <div class="greeting">
+          <div class="line">GOOD MORNING,</div>
+          <div class="line" id="greeting-name">ROBERT</div>
+        </div>
+
+        <div class="glass home-big-widget" id="home-big-widget" style="cursor: pointer;">
+          <div id="home-big-widget-content"></div>
+        </div>
+
+        <div class="status-bar">
+          <div class="stat active">
+            <div class="stat-label">WATCH</div>
+            <div class="stat-value" id="status-watch">DAY 1</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">SLEEP</div>
+            <div class="stat-value" id="status-sleep">—</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">MOOD</div>
+            <div class="stat-value" id="status-mood">—</div>
+          </div>
+        </div>
+
+        <div class="card-stack">
+
+          <div class="glass scripture-card">
+            <div class="label" style="margin-bottom: 10px;">SCRIPTURE · M'CHEYNE</div>
+            <div class="verse" id="today-verse">"But you are a chosen race, a royal priesthood, a holy nation, a people for his own possession, that you may proclaim the excellencies of him who called you out of darkness into his marvelous light."</div>
+            <div class="ref" id="today-ref">1 Peter 2:9 (ESV)</div>
+          </div>
+
+          <div class="glass memory-card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+              <div class="label">MEMORY</div>
+              <div class="dots" id="memory-dots">
+                <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+              </div>
+            </div>
+            <div class="verse" id="memory-card-verse">"Add a memory verse in the Memory section to get started."</div>
+            <div class="muted" style="font-size: 11px; margin-top: 8px;"><span id="memory-card-ref">No current verse</span> · <span id="memory-progress">0 of 7 days</span></div>
+            <button class="btn btn-ghost btn-sm" id="drill-btn" style="margin-top: 12px;">DRILL THIS VERSE</button>
+          </div>
+
+          <div class="glass identity-card accent">
+            <div class="label" style="margin-bottom: 10px;">IDENTITY · SON</div>
+            <div class="statement" id="today-identity">I am a son before I am a performer.</div>
+          </div>
+
+          <div class="action-card-row">
+            <button class="action-card primary" id="morning-btn">
+              <i class="ti ti-sunrise"></i>
+              <div class="lbl">MORNING CHECK-IN</div>
+            </button>
+            <button class="action-card" id="evening-btn">
+              <i class="ti ti-moon-stars"></i>
+              <div class="lbl">EVENING CLOSE</div>
+            </button>
+          </div>
+
+          <div class="home-recent-badges" id="home-recent-badges-card">
+            <div class="home-recent-badges-head">
+              <div class="label">RECENT BADGES</div>
+              <div class="view-all" id="home-recent-badges-view-all">VIEW ALL ›</div>
+            </div>
+            <div id="home-recent-badges-body"></div>
+          </div>
+
+          <div class="daily-brief-card" id="daily-brief-card">
+            <div class="daily-brief-head">
+              <div class="daily-brief-label">DAILY BRIEF</div>
+              <div class="daily-brief-date" id="daily-brief-date"></div>
+            </div>
+            <div id="daily-brief-body"></div>
+          </div>
+
+          <div id="home-risk-container"></div>
+          <div id="home-letter-banner-container"></div>
+
+          <!-- DAILY PLAY -->
+          <div class="daily-play-card" id="daily-play-card"></div>
+
+        </div>
+
+        <div class="footer-note">"Be still, and know that I am God."</div>
+
+      </div>
+    </section>
+
+    <!-- === THE WATCH === -->
+    
+</main>
+</div>
+<script src="assets/core.js"></script>
+</body>
+</html>
